@@ -40,6 +40,17 @@ while (True):
     print(Pu,T,((h6-h3)-(1-y)*(h6-h7-h2+h1))/(h5-h4))
     if (((h6-h3)-(1-y)*(h6-h7-h2+h1))/(h5-h4) <= 0.55):
         break
+
+#Kondisi ideal
+print("T    H   S   P   X")
+print("1", CP.PropsSI('T', 'P', Pb, 'Q', 0, 'Water'), h1, S1, Pb, "0")
+print("2", CP.PropsSI('T', 'P', Pu2, 'H', h2s, 'Water'), h2s, CP.PropsSI('S', 'P', Pu2, 'H', h2s, 'Water'), Pu2, "Liquid")
+print("3", CP.PropsSI('T', 'P', Pu2, 'H', h3, 'Water'), h3, CP.PropsSI('S', 'P', Pu2, 'H', h3, 'Water'), Pu2, CP.PropsSI('Q', 'P', Pu2, 'H', h3, 'Water'))
+print("4", CP.PropsSI('T', 'P', Pu, 'H', h4s, 'Water'), h4s, CP.PropsSI('S', 'P', Pu, 'H', h4s, 'Water'), Pu, CP.PropsSI('Q', 'P', Pu, 'H', h4s, 'Water'))
+print("5", T, h5, CP.PropsSI('S', 'P', Pu, 'H', h5, 'Water'), Pu, CP.PropsSI('Q', 'P', Pu, 'H', h5, 'Water'))
+print("6", CP.PropsSI('T', 'P', Pu2, 'H', h6s, 'Water'), h6s, CP.PropsSI('S', 'P', Pu2, 'H', h6s, 'Water'), Pu2, CP.PropsSI('Q', 'P', Pu2, 'H', h6s, 'Water'))
+print("7", CP.PropsSI('T', 'P', Pb, 'H', h7s, 'Water'), h7s, CP.PropsSI('S', 'P', Pb, 'H', h7s, 'Water'), Pb, CP.PropsSI('Q', 'P', Pb, 'H', h7s, 'Water'))
+#Kondisi aktual
 print("T    H   S   P   X")
 print("1", CP.PropsSI('T', 'P', Pb, 'Q', 0, 'Water'), h1, S1, Pb, "0")
 print("2", CP.PropsSI('T', 'P', Pu2, 'H', h2, 'Water'), h2, CP.PropsSI('S', 'P', Pu2, 'H', h2, 'Water'), Pu2, "Liquid")
@@ -48,3 +59,4 @@ print("4", CP.PropsSI('T', 'P', Pu, 'H', h4, 'Water'), h4, CP.PropsSI('S', 'P', 
 print("5", T, h5, CP.PropsSI('S', 'P', Pu, 'H', h5, 'Water'), Pu, CP.PropsSI('Q', 'P', Pu, 'H', h5, 'Water'))
 print("6", CP.PropsSI('T', 'P', Pu2, 'H', h6, 'Water'), h6, CP.PropsSI('S', 'P', Pu2, 'H', h6, 'Water'), Pu2, CP.PropsSI('Q', 'P', Pu2, 'H', h6, 'Water'))
 print("7", CP.PropsSI('T', 'P', Pb, 'H', h7, 'Water'), h7, CP.PropsSI('S', 'P', Pb, 'H', h7, 'Water'), Pb, CP.PropsSI('Q', 'P', Pb, 'H', h7, 'Water'))
+print(y)
